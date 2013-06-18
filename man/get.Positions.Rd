@@ -48,7 +48,7 @@ If you would like to contribute to this function, please contact the author.
 #they want to include it in the position sequence or remove it. 
 
 CIF<-"http://www.pdb.org/pdb/files/3GFT.cif"
-Fasta<-"http://www.sanger.ac.uk/perl/genetics/CGP/cosmic_sequence?ln=KRAS;format=aa"
+Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.extracted.positions<- get.Positions(CIF, Fasta, "A")
 ###################################################
 
@@ -58,9 +58,10 @@ KRAS.extracted.positions<- get.Positions(CIF, Fasta, "A")
 #However, none of these residues are explained within the actual CIF file.
 
 CIF<- "http://www.pdb.org/pdb/files/2RD0.cif"
-Fasta<-"http://www.sanger.ac.uk/perl/genetics/CGP/cosmic_sequence?ln=PIK3CA;format=aa"
+Fasta<-"http://cancer.sanger.ac.uk/cosmic/sequence?width=700&ln=PIK3CA&type=protein&height=500"
 PIK3CA.extracted.positions<- get.Positions(CIF,Fasta , "A")
 ###################################################
+
 
 ###################################################
 #Observe that the final result from the code below is "OK". Here we use a different file
