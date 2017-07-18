@@ -89,7 +89,7 @@ When unmapping back to the original space, the end points of the cluster in the 
 \examples{
 #Extract the data from a CIF file and match it up with the canonical protein sequence.
 #Here we use the 3GFT structure from the PDB, which corresponds to the KRAS protein.
-CIF<-"http://www.pdb.org/pdb/files/3GFT.cif"
+CIF<-"https://files.rcsb.org/view/3GFT.cif"
 Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.Positions<-get.Positions(CIF,Fasta, "A")
 
