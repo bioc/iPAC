@@ -47,7 +47,7 @@ If you would like to contribute to this function, please contact the author.
 #Thus it is considered a "reconciled" mismatch. It is up to the user to decide if 
 #they want to include it in the position sequence or remove it. 
 
-CIF<-"http://www.pdb.org/pdb/files/3GFT.cif"
+CIF<-"https://files.rcsb.org/view/3GFT.cif"
 Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.extracted.positions<- get.Positions(CIF, Fasta, "A")
 ###################################################
@@ -57,7 +57,7 @@ KRAS.extracted.positions<- get.Positions(CIF, Fasta, "A")
 #10 mismatched residues between the CIF file and the canonical sequence. 
 #However, none of these residues are explained within the actual CIF file.
 
-CIF<- "http://www.pdb.org/pdb/files/2RD0.cif"
+CIF<- "https://files.rcsb.org/view/2RD0.cif"
 Fasta<-"http://cancer.sanger.ac.uk/cosmic/sequence?width=700&ln=PIK3CA&type=protein&height=500"
 PIK3CA.extracted.positions<- get.Positions(CIF,Fasta , "A")
 ###################################################
@@ -71,7 +71,7 @@ PIK3CA.extracted.positions<- get.Positions(CIF,Fasta , "A")
 #sequence information from the same source. For example, if your mutation data was obtained from 
 #COSMIC, you should use COSMIC to get the canonical protein sequence.
 
-CIF <- "http://www.pdb.org/pdb/files/2RD0.cif"
+CIF <- "https://files.rcsb.org/view/2RD0.cif"
 Fasta <- "http://www.uniprot.org/uniprot/P42336.fasta"
 PIK3CA.extracted.positions<- get.Positions(CIF, Fasta, "A")
 ###################################################

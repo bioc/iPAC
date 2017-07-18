@@ -33,3 +33,9 @@
     \item Updated file to be consistent with Bioconductor version numbering. Also fixed a rare bug that gave an error if every residue aligned between mutational and positional data.
   }
 }
+
+\section{Release Notes for Version 1.20.1 - 2017.07.18}{
+  \itemize{
+    \item Url corrections for new pdb.org website file structure.
+  }
+}

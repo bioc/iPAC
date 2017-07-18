@@ -77,7 +77,7 @@ If you would like to contribute to this function, please contact the author.
 \examples{
 #Observe that position 61 is missing. It is atuomatically dropped as the pdb data
 #specifies it as a "H" while the FASTA sequence specifies it as "Q".
-CIF<-"http://www.pdb.org/pdb/files/3GFT.cif"
+CIF<-"https://files.rcsb.org/view/3GFT.cif"
 Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
 get.AlignedPositions(CIF,Fasta, "A")
 }
