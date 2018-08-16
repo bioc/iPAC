@@ -22,7 +22,7 @@ The first line in the file being processed must begin with a ">". If the ending 
 }  
 \examples{
 #Reads the amino acid sequence for KRAS from Uniprot
-get.AASeq("http://www.uniprot.org/uniprot/P01116-2.fasta")
+get.AASeq("https://www.uniprot.org/uniprot/P01116-2.fasta")
 }
 \keyword{Amino Acids}
 \keyword{FASTA}

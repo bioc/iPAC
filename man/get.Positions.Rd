@@ -48,7 +48,7 @@ If you would like to contribute to this function, please contact the author.
 #they want to include it in the position sequence or remove it. 
 
 CIF<-"https://files.rcsb.org/view/3GFT.cif"
-Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
+Fasta<-"https://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.extracted.positions<- get.Positions(CIF, Fasta, "A")
 ###################################################
 
@@ -72,7 +72,7 @@ PIK3CA.extracted.positions<- get.Positions(CIF,Fasta , "A")
 #COSMIC, you should use COSMIC to get the canonical protein sequence.
 
 CIF <- "https://files.rcsb.org/view/2RD0.cif"
-Fasta <- "http://www.uniprot.org/uniprot/P42336.fasta"
+Fasta <- "https://www.uniprot.org/uniprot/P42336.fasta"
 PIK3CA.extracted.positions<- get.Positions(CIF, Fasta, "A")
 ###################################################
  

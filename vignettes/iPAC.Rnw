@@ -111,7 +111,7 @@ Code Example 2: Extracting positions using the get.Positions function
 <<label=Example2,echo= true, eval = FALSE>>=
 library(iPAC)
 CIF<-"https://files.rcsb.org/view/3GFT.cif"
-Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
+Fasta<-"https://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.Positions<-get.Positions(CIF, Fasta, "A")
 names(KRAS.Positions)
 @
@@ -181,7 +181,7 @@ Code Example 3: Final example of the get.Positions function
 \end{verbatim}
 <<label = Example4, echo= true, eval=FALSE>>=
 CIF <- "https://files.rcsb.org/view/2RD0.cif"
-Fasta <- "http://www.uniprot.org/uniprot/P42336.fasta"
+Fasta <- "https://www.uniprot.org/uniprot/P42336.fasta"
 PIK3CAV2.Positions <- get.Positions(CIF, Fasta, "A")
 names(PIK3CAV2.Positions)
 @
@@ -246,7 +246,7 @@ Code Example 4: Extracting positions using the get.AlignedPositions function
 \end{verbatim}
 <<label =  Example5, echo= true,eval=FALSE>>=
 CIF<- "https://files.rcsb.org/view/2RD0.cif"
-Fasta <- "http://www.uniprot.org/uniprot/P42336.fasta"
+Fasta <- "https://www.uniprot.org/uniprot/P42336.fasta"
 PIK3CAV3.Positions<-get.AlignedPositions(CIF,Fasta , "A")
 names(PIK3CAV3.Positions)
 @
@@ -319,7 +319,7 @@ Code Example 5: Running the ClusterFind method with a MDS mapping
 #Extract the data from a CIF file and match it up with the canonical protein sequence.
 #Here we use the 3GFT structure from the PDB, which corresponds to the KRAS protein.
 CIF<-"https://files.rcsb.org/view/3GFT.cif"
-Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
+Fasta<-"https://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.Positions<-get.Positions(CIF,Fasta, "A")
 
 #Load the mutational data for KRAS. Here the mutational data was obtained from the
@@ -403,7 +403,7 @@ Code Example 6: Running the ClusterFind method with a Linear mapping
 #Extract the data from a CIF file and match it up with the canonical protein sequence.
 #Here we use the 3GFT structure from the PDB, which corresponds to the KRAS protein.
 CIF<-"https://files.rcsb.org/view/3GFT.cif"
-Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
+Fasta<-"https://www.uniprot.org/uniprot/P01116-2.fasta"
 KRAS.Positions<-get.Positions(CIF,Fasta, "A")
 
 #Load the mutational data for KRAS. Here the mutational data was obtained from the
