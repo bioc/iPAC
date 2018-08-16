@@ -78,7 +78,7 @@ If you would like to contribute to this function, please contact the author.
 #Observe that position 61 is missing. It is atuomatically dropped as the pdb data
 #specifies it as a "H" while the FASTA sequence specifies it as "Q".
 CIF<-"https://files.rcsb.org/view/3GFT.cif"
-Fasta<-"http://www.uniprot.org/uniprot/P01116-2.fasta"
+Fasta<-"https://www.uniprot.org/uniprot/P01116-2.fasta"
 get.AlignedPositions(CIF,Fasta, "A")
 }
 \keyword{Amino Acids}
