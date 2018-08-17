@@ -58,7 +58,7 @@ KRAS.extracted.positions<- get.Positions(CIF, Fasta, "A")
 #However, none of these residues are explained within the actual CIF file.
 
 CIF<- "https://files.rcsb.org/view/2RD0.cif"
-Fasta<-"http://cancer.sanger.ac.uk/cosmic/sequence?width=700&ln=PIK3CA&type=protein&height=500"
+Fasta<-"https://cancer.sanger.ac.uk/cosmic/sequence?width=700&ln=PIK3CA&type=protein&height=500"
 PIK3CA.extracted.positions<- get.Positions(CIF,Fasta , "A")
 ###################################################
 
