@@ -83,7 +83,7 @@ function(mutation.data, position.data,method = "MDS", alpha = 0.05, MultComp = "
   
   
   #The code below adjusts for the missing AA if you remove some columns
-  if(!is.null(OriginalPaperResultCulled) && substring(OriginalPaperResultCulled,1,6)!="ERROR!"){
+  if(!is.null(OriginalPaperResultCulled) && typeof(OriginalPaperResultCulled) != "character") {#&& substring(OriginalPaperResultCulled,1,6)!="ERROR!"){
     OriginalPaperAdjustedClusters <- MatrixInsert(missing.values.matrix, OriginalPaperResultCulled[,2:3])
     OriginalPaperResultCulled[,2:3]<- OriginalPaperAdjustedClusters
   }
@@ -92,26 +92,25 @@ function(mutation.data, position.data,method = "MDS", alpha = 0.05, MultComp = "
   ###Map Clusters to Original Protein Sequence Then Calls MatrixInsert To Calculate The Correct Size
   ################################################################################
   Unmapped.Clustering.Results <- ClusteringResults
-  if(!is.null(ClusteringResults) && substring(ClusteringResults,1,6)!="ERROR!"){
-    
-    #This part maps it to the original but does not account for "jumps". Thus if the position.data starts at 12, and the first clustering result is at 12-13, the output
-    #would be 1 -2. Adjustment is needed to fill in the gaps
-    for(i in 1: dim(ClusteringResults)[1]){
-      Unmapped.Clustering.Results[i,2] <- remapped[[2]][ClusteringResults[i,2]]
-      Unmapped.Clustering.Results[i,3] <- remapped[[2]][ClusteringResults[i,3]]
+  ##&& substring(ClusteringResults,1,6)!="ERROR!"
+  
+  if(!is.null(ClusteringResults) && typeof(ClusteringResults)!= "character"){
+      #This part maps it to the original but does not account for "jumps". Thus if the position.data starts at 12, and the first clustering result is at 12-13, the output
+      #would be 1 -2. Adjustment is needed to fill in the gaps
+      for(i in 1: dim(ClusteringResults)[1]){
+        Unmapped.Clustering.Results[i,2] <- remapped[[2]][ClusteringResults[i,2]]
+        Unmapped.Clustering.Results[i,3] <- remapped[[2]][ClusteringResults[i,3]]
         if(Unmapped.Clustering.Results[i,2] > Unmapped.Clustering.Results[i,3] ){
           temp <- Unmapped.Clustering.Results[i,2]
           Unmapped.Clustering.Results[i,2]<- Unmapped.Clustering.Results[i,3]
           Unmapped.Clustering.Results[i,3]<- temp
         }
-      Unmapped.Clustering.Results[i,4]<-sum(mutation.data.culled[,Unmapped.Clustering.Results[i,2]:Unmapped.Clustering.Results[i,3]])
-    }
-    
-  
-    
-  AdjustedClusters <- MatrixInsert(missing.values.matrix, Unmapped.Clustering.Results[,2:3])
-  Unmapped.Clustering.Results[,1]<- AdjustedClusters[,2]-AdjustedClusters[,1]+1
-  Unmapped.Clustering.Results[,2:3] <- AdjustedClusters
+        Unmapped.Clustering.Results[i,4]<-sum(mutation.data.culled[,Unmapped.Clustering.Results[i,2]:Unmapped.Clustering.Results[i,3]])
+      }
+      
+      AdjustedClusters <- MatrixInsert(missing.values.matrix, Unmapped.Clustering.Results[,2:3])
+      Unmapped.Clustering.Results[,1]<- AdjustedClusters[,2]-AdjustedClusters[,1]+1
+      Unmapped.Clustering.Results[,2:3] <- AdjustedClusters
   }
   
   ############################################################################

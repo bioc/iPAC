@@ -1,1 +1,2 @@
 export(ClusterFind,get.AASeq,get.AlignedPositions,get.Positions,get.SingleLetterCode,nmc,Plot.Protein.Linear, get.Remapped.Order)
+import(Biostrings, multtest, scatterplot3d)
