@@ -1,2 +1,11 @@
-export(ClusterFind,get.AASeq,get.AlignedPositions,get.Positions,get.SingleLetterCode,nmc,Plot.Protein.Linear, get.Remapped.Order)
+importFrom(grDevices, cm.colors, col2rgb, dev.copy2pdf,
+                      dev.off, gray, heat.colors, pdf, topo.colors)
+importFrom(graphics, par, rect, text)
+importFrom(stats, cmdscale, dist, dmultinom, pbeta, pbinom)
+
+import(gdata)
+
 import(Biostrings, multtest, scatterplot3d)
+importFrom(pwalign, pairwiseAlignment)
+
+export(ClusterFind,get.AASeq,get.AlignedPositions,get.Positions,get.SingleLetterCode,nmc,Plot.Protein.Linear, get.Remapped.Order)

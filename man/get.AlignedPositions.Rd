@@ -27,40 +27,40 @@ get.AlignedPositions(CIF.File.Location, Fasta.File.Location, chain.required = "A
 	The required model num to extract positions from in the CIF file. If the RequiredModelNum == NULL, the method will use the first model number found in the file.
 }
   \item{patternQuality}{
-    The patternQuality parameter in the pairwiseAlignment function in the Biostrings package.
+    The patternQuality parameter in the pairwiseAlignment function in the pwalign package.
 }
   \item{subjectQuality}{
-The subjectQuality parameter in the pairwiseAlignment function in the Biostrings package.
+The subjectQuality parameter in the pairwiseAlignment function in the pwalign package.
 }
   \item{type}{
-The type parameter in the pairwiseAlignment function in the Biostrings package. This should NOT be changed from "global-local" as we use the canonical protein from the FASTA file as the global pattern and the extracted positions from the CIF as the subject pattern. We then attempt to align parts of the subject pattern to the entire global pattern.
+The type parameter in the pairwiseAlignment function in the pwalign package. This should NOT be changed from "global-local" as we use the canonical protein from the FASTA file as the global pattern and the extracted positions from the CIF as the subject pattern. We then attempt to align parts of the subject pattern to the entire global pattern.
 }
   \item{substitutionMatrix}{
-The substitutionMatrix parameter in the pairwiseAlignment function in the Biostrings package.
+The substitutionMatrix parameter in the pairwiseAlignment function in the pwalign package.
 }
   \item{fuzzyMatrix}{
-The fuzzyMatrix parameter in the pairwiseAlignment function in the Biostrings package.
+The fuzzyMatrix parameter in the pairwiseAlignment function in the pwalign package.
 }
   \item{gapOpening}{
-The gapOpening parameter in the pairwiseAlignment function in the Biostrings package.
+The gapOpening parameter in the pairwiseAlignment function in the pwalign package.
 }
   \item{gapExtension}{
-The gapExtension parameter in the pairwiseAlignment function in the Biostrings package.
+The gapExtension parameter in the pairwiseAlignment function in the pwalign package.
 }
   \item{scoreOnly}{
-The scoreOnly parameter in the pairwiseAlignment function in the Biostrings package.
+The scoreOnly parameter in the pairwiseAlignment function in the pwalign package.
 }
 }
 \details{
 This method is currently in BETA and is provided only as a convenient way to extract the required 3D positional information from a CIF file. Currently, CIF (and PDB) files can have a number of deviations from the canonical protein sequence including additional, missing and mismatched amino acids. The amino acid numbering in CIF files can also be different from the canonical protein. This makes it difficult to match up mutational data (from sources such as COSMIC) to 3D positional data (from sources such as the PDB) and necessitates the use of this function.
 
-This method extracts the canonical amino acid sequence from the file at \emph{Fasta.File.Location}. It then attempts to align the amino acids extracted from the CIF file to the canonical sequence using the pairwiseAlignment function in the package \emph{Biostrings} that is available on \emph{Bioconductor}. After alignment, any amino acids that are mismatched between the canonical sequence and the extracted sequence are automatically removed so that the \emph{ClusterFind} method, which requires positional data as input, is only run on those amino acids which are correctly matched.
+This method extracts the canonical amino acid sequence from the file at \emph{Fasta.File.Location}. It then attempts to align the amino acids extracted from the CIF file to the canonical sequence using the pairwiseAlignment function in the package \emph{pwalign} that is available on \emph{Bioconductor}. After alignment, any amino acids that are mismatched between the canonical sequence and the extracted sequence are automatically removed so that the \emph{ClusterFind} method, which requires positional data as input, is only run on those amino acids which are correctly matched.
 }
 \value{
 \item{Positions}{A dataframe that shows the extracted amino acids, their numerical position in the protein order, the protein side chain being used and the amino acid positions in 3D space.}
 \item{Diff.Count}{A check that the amino acids remaining are in fact matched to the canonical protein. This returns a count of the number of amino acids remaining that do not match the canonical sequence and should be 0 if a successful alignment occurred.}
 \item{Diff.Positions}{A description of the mismatched amino acids if any were found. If a succesful alignment occurred, this will be NULL.}
-\item{Alignment.Result}{The raw alignment result returned by the pairwiseAlignment method in the \emph{Biostrings} package.}
+\item{Alignment.Result}{The raw alignment result returned by the pairwiseAlignment method in the \emph{pwalign} package.}
 \item{Result}{The final status of the alignment. If it is "OK", that means that this alignment appears to be ok. If the alignment failed, this item will contain an error message.}
 }
 \references{
