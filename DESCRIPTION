@@ -1,8 +1,8 @@
 Package: iPAC
 Type: Package
 Title: Identification of Protein Amino acid Clustering
-Version: 1.47.1
-Date: 2024-04-23
+Version: 1.47.2
+Date: 2024-04-24
 Author: Gregory Ryslik, Hongyu Zhao
 Maintainer: Gregory Ryslik <gregory.ryslik@yale.edu>
 Description: iPAC is a novel tool to identify somatic amino acid

@@ -5,7 +5,8 @@ importFrom(stats, cmdscale, dist, dmultinom, pbeta, pbinom)
 
 import(gdata)
 
-import(Biostrings, multtest, scatterplot3d)
+import(multtest, scatterplot3d)
+importFrom(Biostrings, PhredQuality, start)
 importFrom(pwalign, pairwiseAlignment)
 
 export(ClusterFind,get.AASeq,get.AlignedPositions,get.Positions,get.SingleLetterCode,nmc,Plot.Protein.Linear, get.Remapped.Order)

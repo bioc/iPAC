@@ -1,7 +1,7 @@
 \documentclass{article}
 
 %\VignetteIndexEntry{iPAC: identification of Protein Amino acid Mutations}
-%\VignetteDepends{gdata, scatterplot3d, Biostrings, multtest}
+%\VignetteDepends{gdata, scatterplot3d, Biostrings, pwalign, multtest}
 %\VignetteKeywords{Clusters, Amino Acids, Alignment, CIF,Somatic Mutations, NMC}
 %\VignettePackage{iPac}
 
