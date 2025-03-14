@@ -1,7 +1,7 @@
 Package: iPAC
 Type: Package
 Title: Identification of Protein Amino acid Clustering
-Version: 1.51.0
+Version: 1.51.1
 Date: 2024-04-24
 Author: Gregory Ryslik, Hongyu Zhao
 Maintainer: Gregory Ryslik <gregory.ryslik@yale.edu>
@@ -12,3 +12,4 @@ License: GPL-2
 Depends: R(>= 2.15), scatterplot3d, Biostrings, pwalign, multtest
 Imports: grDevices, graphics, stats, gdata
 biocViews: Clustering, Proteomics
+PackageStatus: Deprecated
